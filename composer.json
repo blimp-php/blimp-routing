@@ -1,0 +1,35 @@
+{
+    "name": "blimp/blimp-routing",
+    "type": "library",
+    "description": "Blimp framework",
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Nelson Antunes",
+            "email": "nelson.antunes@gmail.com",
+            "homepage": "http://nantunes.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "blimp/blimp-http": "@dev",
+        "blimp/blimp-config": "@dev",
+        "symfony/routing": "2.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blimp\\Routing\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "../blimp-http"
+        },
+        {
+            "type": "vcs",
+            "url": "../blimp-config"
+        }
+    ]
+}
