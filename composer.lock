@@ -4,41 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74a80d6193f847924401ed9818556a50",
+    "hash": "9caee339164ecf26b6c462354adb3edf",
     "packages": [
-        {
-            "name": "blimp/blimp-config",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "../blimp-config",
-                "reference": "a9a013658442d7852424e39c237257cca60668af"
-            },
-            "require": {
-                "pimple/pimple": "~3.0",
-                "symfony/config": "2.5.*",
-                "symfony/yaml": "2.5.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Blimp\\Config\\": "src"
-                }
-            },
-            "license": [
-                "LGPL-3.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Nelson Antunes",
-                    "email": "nelson.antunes@gmail.com",
-                    "homepage": "http://nantunes.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Blimp framework",
-            "time": "2015-02-09 17:07:40"
-        },
         {
             "name": "blimp/blimp-http",
             "version": "dev-master",
@@ -622,8 +589,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "blimp/blimp-http": 20,
-        "blimp/blimp-config": 20
+        "blimp/blimp-http": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -13,7 +13,8 @@
     ],
     "require": {
         "blimp/blimp-http": "@dev",
-        "blimp/blimp-config": "@dev",
+        "symfony/config": "2.5.*",
+        "symfony/yaml": "2.5.*",
         "symfony/routing": "2.5.*"
     },
     "autoload": {
@@ -26,10 +27,6 @@
         {
             "type": "vcs",
             "url": "../blimp-http"
-        },
-        {
-            "type": "vcs",
-            "url": "../blimp-config"
         }
     ]
 }
