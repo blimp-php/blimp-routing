@@ -23,10 +23,5 @@
         }
     },
     "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "../blimp-http"
-        }
-    ]
+    "repositories": [ { "type": "composer", "url": "http://packages.nantunes.net/" } ]
 }
