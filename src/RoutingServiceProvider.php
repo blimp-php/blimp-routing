@@ -32,12 +32,13 @@ class RoutingServiceProvider implements ServiceProviderInterface {
         };
 
         $api['routing.utils.resolve'] = $api->protect(function($class, $type) use ($api) {
-            if (false === strpos($class, '\\')) {
-                foreach ($api['blimp.package_roots'] as $root) {
-                    $parts = explode('::', $class);
-                    $classname = array_pop($parts);
+            if (false === strpos($class, '\\') && false !== strpos($class, '::')) {
+                $parts = explode('::', $class);
+                $classname = array_pop($parts);
+                $sufix = '\\' . implode('\\', $parts) . '\\' . $type . '\\' . $classname;
 
-                    $classpath = $root . '\\' . implode('\\', $parts) . '\\' . $type . '\\' . $classname;
+                foreach ($api['blimp.package_roots'] as $root) {
+                    $classpath = $root . $sufix;
 
                     if(class_exists($classpath)) {
                         $class = $classpath;
@@ -59,6 +60,13 @@ class RoutingServiceProvider implements ServiceProviderInterface {
 
                 foreach ($routes as $value) {
                     $params = $value->getDefaults();
+
+                    // TODO
+                    // foreach ($params as $k => $v) {
+                    //     if(strpos($k, '_') === 0) {
+
+                    //     }
+                    // }
 
                     if(array_key_exists('_controller', $params)) {
                         if (false === strpos($params['_controller'], '\\')) {
