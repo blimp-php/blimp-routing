@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 
 class HttpEventSubscriber implements EventSubscriberInterface {
-    private $api;
+    protected $api;
 
     public function __construct($api) {
         $this->api = $api;
