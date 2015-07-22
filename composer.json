@@ -1,6 +1,5 @@
 {
     "name": "blimp/blimp-routing",
-    "version": "0.1.5",
     "type": "library",
     "description": "Blimp framework",
     "license": "LGPL-3.0+",
@@ -15,8 +14,6 @@
     "require": {
         "php": ">=5.4.0",
         "blimp/blimp-http": "1.0.*",
-        "symfony/config": "2.5.*",
-        "symfony/yaml": "2.5.*",
         "symfony/routing": "2.5.*"
     },
     "autoload": {
